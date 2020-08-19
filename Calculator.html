@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.class{
+			background-color: yellow;
+			color: black;
+			font-style: bold;
+		}
+		.class1{
+			background-color: lightblue;
+			color: black;
+			font-style: bold;
+		}
+	</style>
+	<script type="text/javascript">
+		function show(val)
+		{
+		document.getElementById("Calc").value+=val
+		 }
+		
+		function solve()
+		{
+		let x = document.getElementById("Calc").value
+		let y = eval(x)
+		document.getElementById("Calc").value = y
+		}
+		
+		function clr()
+		{
+		document.getElementById("Calc").value = ""	
+		}
+	</script>
+
+</head>
+<body>
+<div class = title ><center><h1>Calculator</h1></center></div>
+<table border="1" style="background-color:green;" align="center">
+	<tr>
+		<td><input type="button" style="background-color: red;color: white;font-style: bold;" value="c" onclick="clr()"/> </td>
+		<td colspan="3"><input type="text" id="Calc"/></td>
+	</tr>
+	<tr>
+		<td><input type="button" class="class" value="+" onclick="show('+')"/> </td>
+		<td><input type="button" class="class1" value="1" onclick="show('1')"/> </td>
+		<td><input type="button" class="class1" value="2" onclick="show('2')"/> </td>
+		<td><input type="button" class="class1" value="3" onclick="show('3')"/> </td>
+	</tr>
+	<tr>
+		<td><input type="button" class="class" value="-" onclick="show('-')"/> </td>
+		<td><input type="button" class="class1" value="4" onclick="show('4')"/> </td>
+		<td><input type="button" class="class1" value="5" onclick="show('5')"/> </td>
+		<td><input type="button" class="class1" value="6" onclick="show('6')"/> </td>
+	</tr>
+	<tr>
+		<td><input type="button" class="class" value="*" onclick="show('*')"/> </td>
+		<td><input type="button" class="class1" value="7" onclick="show('7')"/> </td>
+		<td><input type="button" class="class1" value="8" onclick="show('8')"/> </td>
+		<td><input type="button" class="class1" value="9" onclick="show('9')"/> </td>
+	</tr>
+	<tr>
+		<td><input type="button" class="class" value="/" onclick="show('/')"/> </td>
+		<td><input type="button" class="class1" value="." onclick="show('.')"/> </td>
+		<td><input type="button" class="class1" value="0" onclick="show('0')"/> </td>
+		<td><input type="button" style="background-color: red;color: white;font-style: bold;" value="=" onclick="solve()"/> </td>
+	</tr>
+</table>
+</body>
+</html>
